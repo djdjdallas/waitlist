@@ -1,3 +1,5 @@
+import WaitlistForm from './components/WaitlistForm';
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
@@ -235,49 +237,7 @@ export default function Home() {
             </p>
           </div>
 
-          <form className="space-y-4">
-            <div>
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="w-full px-6 py-4 rounded-full border-2 border-gray-200 focus:border-[#00A699] focus:outline-none text-lg"
-                required
-              />
-            </div>
-            <div>
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="w-full px-6 py-4 rounded-full border-2 border-gray-200 focus:border-[#00A699] focus:outline-none text-lg"
-                required
-              />
-            </div>
-            <div>
-              <input
-                type="tel"
-                placeholder="Phone Number (optional)"
-                className="w-full px-6 py-4 rounded-full border-2 border-gray-200 focus:border-[#00A699] focus:outline-none text-lg"
-              />
-            </div>
-            <div>
-              <input
-                type="number"
-                placeholder="How many properties do you manage?"
-                className="w-full px-6 py-4 rounded-full border-2 border-gray-200 focus:border-[#00A699] focus:outline-none text-lg"
-                min="1"
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-[#00A699] text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-[#008c82] transition-colors shadow-lg hover:shadow-xl"
-            >
-              Join the Waitlist →
-            </button>
-          </form>
-
-          <p className="text-center mt-6 text-gray-500">
-            🎁 Early members get 3 months free + lifetime discount
-          </p>
+          <WaitlistForm />
         </div>
       </section>
 
