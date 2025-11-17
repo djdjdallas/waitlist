@@ -1,4 +1,4 @@
-import WaitlistForm from './components/WaitlistForm';
+import WaitlistForm from "./components/WaitlistForm";
 
 export default function Home() {
   return (
@@ -35,7 +35,9 @@ export default function Home() {
 
             {/* Subheadline */}
             <p className="text-xl sm:text-2xl text-gray-600 mb-8 leading-relaxed">
-              One missed cleaning costs $300+. CleanPing auto-texts your cleaner at checkout and confirms they're coming. $15/mo. No marketplace. No complexity.
+              One missed cleaning costs $300+. CleanPing auto-texts your cleaner
+              at checkout and confirms they're coming. $15/mo. No marketplace.
+              No complexity.
             </p>
 
             {/* 3 Bullet Points */}
@@ -43,19 +45,28 @@ export default function Home() {
               <div className="flex items-start gap-3">
                 <span className="text-2xl flex-shrink-0">✅</span>
                 <p className="text-lg text-gray-700">
-                  <strong className="font-semibold text-gray-900">Automatic Calendar Sync</strong> – Detects checkouts from Airbnb/VRBO
+                  <strong className="font-semibold text-gray-900">
+                    Automatic Calendar Sync
+                  </strong>{" "}
+                  – Detects checkouts from Airbnb/VRBO
                 </p>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-2xl flex-shrink-0">✅</span>
                 <p className="text-lg text-gray-700">
-                  <strong className="font-semibold text-gray-900">SMS to Your Cleaners</strong> – Works with your existing team (no marketplace lock-in)
+                  <strong className="font-semibold text-gray-900">
+                    SMS to Your Cleaners
+                  </strong>{" "}
+                  – Works with your existing team (no marketplace lock-in)
                 </p>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-2xl flex-shrink-0">✅</span>
                 <p className="text-lg text-gray-700">
-                  <strong className="font-semibold text-gray-900">Job Confirmation</strong> – Cleaner replies YES/NO, you get instant notification
+                  <strong className="font-semibold text-gray-900">
+                    Job Confirmation
+                  </strong>{" "}
+                  – Cleaner replies YES/NO, you get instant notification
                 </p>
               </div>
             </div>
@@ -74,7 +85,8 @@ export default function Home() {
             <div className="mt-8 max-w-2xl mx-auto">
               <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
                 <p className="text-gray-700 italic text-lg mb-2">
-                  "We completely overlooked a booking and scrambled to arrange cleaning just before the next guest arrived!"
+                  "We completely overlooked a booking and scrambled to arrange
+                  cleaning just before the next guest arrived!"
                 </p>
                 <p className="text-gray-500 text-sm">
                   — Reddit host, r/airbnb_hosts
@@ -95,15 +107,23 @@ export default function Home() {
             <div className="space-y-4 text-lg text-gray-600">
               <p className="flex items-start">
                 <span className="text-2xl mr-3">😰</span>
-                <span>You get a new booking. You manually text your cleaner. Again.</span>
+                <span>
+                  You get a new booking. You manually text your cleaner. Again.
+                </span>
               </p>
               <p className="flex items-start">
                 <span className="text-2xl mr-3">⏰</span>
-                <span>It's midnight when the booking comes in. You'll text them tomorrow... and forget.</span>
+                <span>
+                  It's midnight when the booking comes in. You'll text them
+                  tomorrow... and forget.
+                </span>
               </p>
               <p className="flex items-start">
                 <span className="text-2xl mr-3">🤦</span>
-                <span>Your guest arrives to a dirty property. 1-star review incoming.</span>
+                <span>
+                  Your guest arrives to a dirty property. 1-star review
+                  incoming.
+                </span>
               </p>
             </div>
           </div>
@@ -132,7 +152,8 @@ export default function Home() {
                 Connect Your Calendar
               </h3>
               <p className="text-gray-600 text-lg">
-                Link your Airbnb calendar in seconds. We sync with all bookings automatically.
+                Link your Airbnb calendar in seconds. We sync with all bookings
+                automatically.
               </p>
             </div>
 
@@ -145,7 +166,8 @@ export default function Home() {
                 Add Your Cleaner
               </h3>
               <p className="text-gray-600 text-lg">
-                Enter your cleaner's phone number and set your preferences. Done.
+                Enter your cleaner's phone number and set your preferences.
+                Done.
               </p>
             </div>
 
@@ -158,7 +180,8 @@ export default function Home() {
                 Relax & Repeat
               </h3>
               <p className="text-gray-600 text-lg">
-                New booking? CleanPing automatically texts your cleaner. Every. Single. Time.
+                New booking? CleanPing automatically texts your cleaner. Every.
+                Single. Time.
               </p>
             </div>
           </div>
@@ -182,7 +205,8 @@ export default function Home() {
                 Instant SMS Notifications
               </h3>
               <p className="text-gray-600 text-lg">
-                Your cleaner gets a text the moment you get a booking. No apps to download, no accounts to create.
+                Your cleaner gets a text the moment you get a booking. No apps
+                to download, no accounts to create.
               </p>
             </div>
 
@@ -193,7 +217,8 @@ export default function Home() {
                 Smart Scheduling
               </h3>
               <p className="text-gray-600 text-lg">
-                Customizable lead times ensure your cleaner has enough notice. Same-day booking? Back-to-back guests? We've got you covered.
+                Customizable lead times ensure your cleaner has enough notice.
+                Same-day booking? Back-to-back guests? We've got you covered.
               </p>
             </div>
 
@@ -204,7 +229,8 @@ export default function Home() {
                 Multi-Property Support
               </h3>
               <p className="text-gray-600 text-lg">
-                Manage multiple properties and cleaners from one dashboard. Scale your hosting business effortlessly.
+                Manage multiple properties and cleaners from one dashboard.
+                Scale your hosting business effortlessly.
               </p>
             </div>
 
@@ -215,7 +241,8 @@ export default function Home() {
                 Confirmation Tracking
               </h3>
               <p className="text-gray-600 text-lg">
-                Know when your cleaner receives and confirms each job. Peace of mind, automated.
+                Know when your cleaner receives and confirms each job. Peace of
+                mind, automated.
               </p>
             </div>
           </div>
@@ -237,11 +264,15 @@ export default function Home() {
                 $15<span className="text-2xl text-gray-600">/month</span>
               </div>
               <p className="text-xl text-gray-600">for your first property</p>
-              <p className="text-lg text-gray-500 mt-2">$10/month for each additional property</p>
+              <p className="text-lg text-gray-500 mt-2">
+                $10/month for each additional property
+              </p>
             </div>
 
             <div className="bg-gradient-to-r from-[#00A699] to-[#008c82] rounded-xl p-6 text-center mb-8">
-              <p className="text-2xl font-bold text-white mb-2">🎁 First 50 Beta Users</p>
+              <p className="text-2xl font-bold text-white mb-2">
+                🎁 First 50 Beta Users
+              </p>
               <p className="text-3xl font-bold text-white">50% off for life</p>
               <p className="text-xl text-white/90 mt-2">Just $7.50/month</p>
             </div>
@@ -287,13 +318,22 @@ export default function Home() {
               </p>
             </div>
             <div className="flex space-x-6">
-              <a href="#" className="text-gray-400 hover:text-[#00A699] transition-colors">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-[#00A699] transition-colors"
+              >
                 Privacy
               </a>
-              <a href="#" className="text-gray-400 hover:text-[#00A699] transition-colors">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-[#00A699] transition-colors"
+              >
                 Terms
               </a>
-              <a href="mailto:hello@cleanping.com" className="text-gray-400 hover:text-[#00A699] transition-colors">
+              <a
+                href="mailto:hello@cleanping.com"
+                className="text-gray-400 hover:text-[#00A699] transition-colors"
+              >
                 Contact
               </a>
             </div>
