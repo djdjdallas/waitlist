@@ -19,6 +19,12 @@ CREATE INDEX IF NOT EXISTS waitlist_email_idx ON public.waitlist(email);
 -- Create index on created_at for sorting
 CREATE INDEX IF NOT EXISTS waitlist_created_at_idx ON public.waitlist(created_at DESC);
 
+-- Grant INSERT permission to anon role (for public waitlist form)
+GRANT INSERT ON public.waitlist TO anon;
+
+-- Grant SELECT permission to authenticated users
+GRANT SELECT ON public.waitlist TO authenticated;
+
 -- Enable Row Level Security (RLS)
 ALTER TABLE public.waitlist ENABLE ROW LEVEL SECURITY;
 
