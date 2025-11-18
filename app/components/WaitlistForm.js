@@ -170,7 +170,7 @@ export default function WaitlistForm() {
           value={formData.email}
           onChange={handleChange}
           placeholder="yourname@example.com"
-          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#00A699] focus:ring-2 focus:ring-[#00A699] focus:ring-opacity-20 focus:outline-none"
+          className="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 placeholder:text-gray-400 focus:border-[#00A699] focus:ring-2 focus:ring-[#00A699] focus:ring-opacity-20 focus:outline-none"
           required
           disabled={status === 'loading'}
           aria-required="true"
@@ -190,7 +190,7 @@ export default function WaitlistForm() {
           value={formData.name}
           onChange={handleChange}
           placeholder="Your name"
-          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#00A699] focus:ring-2 focus:ring-[#00A699] focus:ring-opacity-20 focus:outline-none"
+          className="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 placeholder:text-gray-400 focus:border-[#00A699] focus:ring-2 focus:ring-[#00A699] focus:ring-opacity-20 focus:outline-none"
           required
           disabled={status === 'loading'}
           maxLength="100"
@@ -206,7 +206,7 @@ export default function WaitlistForm() {
           name="property_count"
           value={formData.property_count}
           onChange={handleChange}
-          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#00A699] focus:ring-2 focus:ring-[#00A699] focus:ring-opacity-20 focus:outline-none"
+          className="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 focus:border-[#00A699] focus:ring-2 focus:ring-[#00A699] focus:ring-opacity-20 focus:outline-none"
           disabled={status === 'loading'}
         >
           <option value="">Select...</option>
