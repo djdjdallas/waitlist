@@ -64,9 +64,9 @@ export default function WaitlistForm() {
       return;
     }
 
-    if (formData.property_count && (parseInt(formData.property_count) < 1 || parseInt(formData.property_count) > 1000)) {
+    if (!formData.name || formData.name.trim().length < 2) {
       setStatus('error');
-      setErrorMessage('Property count must be between 1 and 1000.');
+      setErrorMessage('Please enter your name.');
       return;
     }
 
@@ -96,7 +96,7 @@ export default function WaitlistForm() {
             name: formData.name.trim(),
             email: formData.email.toLowerCase().trim(),
             phone: formData.phone ? formData.phone.trim() : null,
-            property_count: formData.property_count ? parseInt(formData.property_count) : null
+            property_count: formData.property_count && formData.property_count !== '' ? parseInt(formData.property_count) : null
           }
         ])
         .select();
@@ -160,31 +160,17 @@ export default function WaitlistForm() {
       </div>
 
       <div>
-        <label htmlFor="name" className="sr-only">Your Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          placeholder="Your Name"
-          className="w-full px-6 py-4 rounded-full border-2 border-gray-200 focus:border-[#00A699] focus:outline-none text-lg"
-          required
-          disabled={status === 'loading'}
-          aria-required="true"
-          maxLength="100"
-        />
-      </div>
-      <div>
-        <label htmlFor="email" className="sr-only">Your Email</label>
+        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+          Email Address *
+        </label>
         <input
           type="email"
           id="email"
           name="email"
           value={formData.email}
           onChange={handleChange}
-          placeholder="Your Email"
-          className="w-full px-6 py-4 rounded-full border-2 border-gray-200 focus:border-[#00A699] focus:outline-none text-lg"
+          placeholder="yourname@example.com"
+          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#00A699] focus:ring-2 focus:ring-[#00A699] focus:ring-opacity-20 focus:outline-none"
           required
           disabled={status === 'loading'}
           aria-required="true"
@@ -192,37 +178,44 @@ export default function WaitlistForm() {
           maxLength="100"
         />
       </div>
+
       <div>
-        <label htmlFor="phone" className="sr-only">Phone Number (optional)</label>
+        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+          Name *
+        </label>
         <input
-          type="tel"
-          id="phone"
-          name="phone"
-          value={formData.phone}
+          type="text"
+          id="name"
+          name="name"
+          value={formData.name}
           onChange={handleChange}
-          placeholder="Phone Number (optional)"
-          className="w-full px-6 py-4 rounded-full border-2 border-gray-200 focus:border-[#00A699] focus:outline-none text-lg"
+          placeholder="Your name"
+          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#00A699] focus:ring-2 focus:ring-[#00A699] focus:ring-opacity-20 focus:outline-none"
+          required
           disabled={status === 'loading'}
-          aria-required="false"
-          maxLength="20"
+          maxLength="100"
         />
       </div>
+
       <div>
-        <label htmlFor="property_count" className="sr-only">How many properties do you manage?</label>
-        <input
-          type="number"
+        <label htmlFor="property_count" className="block text-sm font-medium text-gray-700 mb-2">
+          How many properties do you currently coordinate cleanings?
+        </label>
+        <select
           id="property_count"
           name="property_count"
           value={formData.property_count}
           onChange={handleChange}
-          placeholder="How many properties do you manage?"
-          className="w-full px-6 py-4 rounded-full border-2 border-gray-200 focus:border-[#00A699] focus:outline-none text-lg"
-          min="1"
-          max="1000"
-          step="1"
+          className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-[#00A699] focus:ring-2 focus:ring-[#00A699] focus:ring-opacity-20 focus:outline-none"
           disabled={status === 'loading'}
-          aria-required="false"
-        />
+        >
+          <option value="">Select...</option>
+          <option value="1">1 property</option>
+          <option value="2">2 properties</option>
+          <option value="3">3 properties</option>
+          <option value="4">4 properties</option>
+          <option value="5">5+ properties</option>
+        </select>
       </div>
 
       {status === 'error' && (
@@ -238,15 +231,11 @@ export default function WaitlistForm() {
       <button
         type="submit"
         disabled={status === 'loading'}
-        className="w-full bg-[#00A699] text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-[#008c82] transition-colors shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full bg-gray-400 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         aria-label={status === 'loading' ? 'Submitting waitlist form' : 'Join the waitlist'}
       >
-        {status === 'loading' ? 'Joining...' : 'Join the Waitlist →'}
+        {status === 'loading' ? 'Submitting...' : 'Request Access (Beta launches Feb 2025)'}
       </button>
-
-      <p className="text-center mt-6 text-gray-500">
-        🎁 Early members get 3 months free + lifetime discount
-      </p>
     </form>
     </>
   );
