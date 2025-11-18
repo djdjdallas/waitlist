@@ -5,18 +5,18 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="border-b border-gray-100">
+      <nav className="bg-white border-b border-gray-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <span className="text-2xl font-bold text-gray-900">
-                Clean<span className="text-[#00A699]">Ping</span>
+                Clean<span className="text-red-600">Ping</span>
               </span>
             </div>
             <div className="hidden md:block">
               <a
                 href="#waitlist"
-                className="bg-[#00A699] text-white px-6 py-2 rounded-full font-medium hover:bg-[#008c82] transition-colors"
+                className="bg-red-500 text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-red-600 transition-colors shadow-sm"
               >
                 Join Waitlist
               </a>
@@ -58,7 +58,7 @@ export default function Home() {
               </div>
 
               <p className="text-sm text-gray-500 mt-4">
-                5,127 hosts already joined
+                27 hosts already joined
               </p>
             </div>
 
@@ -73,7 +73,9 @@ export default function Home() {
                         Hi Maria! You have a cleaning at Sunset Villa on Dec 15
                         (checkout 11am). Can you confirm?
                       </p>
-                      <p className="text-xs text-gray-500 mt-2">Reply YES or NO</p>
+                      <p className="text-xs text-gray-500 mt-2">
+                        Reply YES or NO
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3 justify-end">
@@ -199,7 +201,8 @@ export default function Home() {
               How CleanPing Works
             </h2>
             <p className="text-xl text-gray-600">
-              Set it once, forget forever. CleanPing handles all your cleaning coordination automatically
+              Set it once, forget forever. CleanPing handles all your cleaning
+              coordination automatically
             </p>
           </div>
 
@@ -207,45 +210,78 @@ export default function Home() {
             {/* Step 1 */}
             <div className="text-center bg-white rounded-xl p-8 shadow-sm">
               <div className="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                <svg
+                  className="w-8 h-8 text-teal-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  />
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
                 1. Sync Your Calendar
               </h3>
               <p className="text-gray-600">
-                Connect your Airbnb/VRBO calendar. CleanPing automatically knows when cleanings are needed.
+                Connect your Airbnb/VRBO calendar. CleanPing automatically knows
+                when cleanings are needed.
               </p>
             </div>
 
             {/* Step 2 */}
             <div className="text-center bg-white rounded-xl p-8 shadow-sm">
               <div className="w-16 h-16 bg-pink-100 rounded-lg flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                <svg
+                  className="w-8 h-8 text-pink-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
+                  />
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
                 2. Auto-SMS Your Cleaner
               </h3>
               <p className="text-gray-600">
-                Smart SMS sent at the perfect time with all the details your cleaner needs.
+                Smart SMS sent at the perfect time with all the details your
+                cleaner needs.
               </p>
             </div>
 
             {/* Step 3 */}
             <div className="text-center bg-white rounded-xl p-8 shadow-sm">
               <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <svg
+                  className="w-8 h-8 text-green-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
                 3. Get Confirmation
               </h3>
               <p className="text-gray-600">
-                Receive instant confirmation when your cleaner accepts. No more wondering if it's handled.
+                Receive instant confirmation when your cleaner accepts. No more
+                wondering if it's handled.
               </p>
             </div>
           </div>
@@ -265,45 +301,78 @@ export default function Home() {
             {/* Feature 1 */}
             <div className="text-center bg-gray-50 rounded-xl p-8">
               <div className="w-16 h-16 bg-teal-100 rounded-lg flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                <svg
+                  className="w-8 h-8 text-teal-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                  />
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
                 Use Your Own Cleaners
               </h3>
               <p className="text-gray-600 text-sm">
-                Keep working with cleaners you trust. No marketplace lock-in or forced switching.
+                Keep working with cleaners you trust. No marketplace lock-in or
+                forced switching.
               </p>
             </div>
 
             {/* Feature 2 */}
             <div className="text-center bg-gray-50 rounded-xl p-8">
               <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <svg
+                  className="w-8 h-8 text-green-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
                 Simple, Fair Pricing
               </h3>
               <p className="text-gray-600 text-sm">
-                $15/month for your first property. $10 for each additional. No hidden fees or commission.
+                $15/month for your first property. $10 for each additional. No
+                hidden fees or commission.
               </p>
             </div>
 
             {/* Feature 3 */}
             <div className="text-center bg-gray-50 rounded-xl p-8">
               <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                <svg
+                  className="w-8 h-8 text-blue-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
+                  />
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
                 SMS That Actually Works
               </h3>
               <p className="text-gray-600 text-sm">
-                Reliable SMS delivery with smart timing that cleaners will actually see and respond to.
+                Reliable SMS delivery with smart timing that cleaners will
+                actually see and respond to.
               </p>
             </div>
           </div>
@@ -333,35 +402,71 @@ export default function Home() {
               <div className="text-5xl sm:text-6xl font-bold text-gray-900 mb-2">
                 $15<span className="text-2xl text-gray-600">/month</span>
               </div>
-              <p className="text-gray-600">First property • $10/month for additional properties</p>
+              <p className="text-gray-600">
+                First property • $10/month for additional properties
+              </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               {/* What's Included */}
               <div>
-                <h3 className="font-bold text-gray-900 mb-4">What's Included:</h3>
+                <h3 className="font-bold text-gray-900 mb-4">
+                  What's Included:
+                </h3>
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-start">
-                    <svg className="w-5 h-5 text-green-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    <svg
+                      className="w-5 h-5 text-green-600 mr-2 mt-0.5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                     Unlimited SMS coordination
                   </li>
                   <li className="flex items-start">
-                    <svg className="w-5 h-5 text-green-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    <svg
+                      className="w-5 h-5 text-green-600 mr-2 mt-0.5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                     Calendar sync (Airbnb/VRBO)
                   </li>
                   <li className="flex items-start">
-                    <svg className="w-5 h-5 text-green-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    <svg
+                      className="w-5 h-5 text-green-600 mr-2 mt-0.5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                     Confirmation tracking
                   </li>
                   <li className="flex items-start">
-                    <svg className="w-5 h-5 text-green-600 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    <svg
+                      className="w-5 h-5 text-green-600 mr-2 mt-0.5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                     Multiple cleaner support
                   </li>
@@ -370,7 +475,9 @@ export default function Home() {
 
               {/* Compare the Cost */}
               <div>
-                <h3 className="font-bold text-gray-900 mb-4">Compare the Cost:</h3>
+                <h3 className="font-bold text-gray-900 mb-4">
+                  Compare the Cost:
+                </h3>
                 <div className="space-y-2">
                   <div className="flex justify-between items-center">
                     <span className="text-gray-600">One missed cleaning</span>
@@ -382,7 +489,9 @@ export default function Home() {
                   </div>
                   <div className="border-t border-gray-200 my-3"></div>
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-900 font-semibold">You save:</span>
+                    <span className="text-gray-900 font-semibold">
+                      You save:
+                    </span>
                     <span className="font-bold text-green-600">$120-520</span>
                   </div>
                 </div>
@@ -461,7 +570,10 @@ export default function Home() {
               &copy; 2025 CleanPing. All rights reserved.
             </p>
             <p className="text-gray-500 text-xs mt-2">
-              Powered by <a href="#" className="text-gray-400 hover:text-white">Claude Code</a>
+              Powered by{" "}
+              <a href="#" className="text-gray-400 hover:text-white">
+                Claude Code
+              </a>
             </p>
           </div>
         </div>
