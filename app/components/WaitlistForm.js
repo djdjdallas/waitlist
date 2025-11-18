@@ -234,7 +234,7 @@ export default function WaitlistForm() {
         className="w-full bg-gray-400 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         aria-label={status === 'loading' ? 'Submitting waitlist form' : 'Join the waitlist'}
       >
-        {status === 'loading' ? 'Submitting...' : 'Request Access (Beta launches Feb 2025)'}
+        {status === 'loading' ? 'Submitting...' : 'Request Access (Beta launches Jan 2026)'}
       </button>
     </form>
     </>

@@ -68,7 +68,7 @@ export default function SuccessModal({ isOpen, onClose, userName }) {
               </li>
               <li className="flex items-start">
                 <span className="text-[#00A699] mr-2">✓</span>
-                <span>We'll notify you when beta launches in February 2025</span>
+                <span>We'll notify you when beta launches in January 2026</span>
               </li>
               <li className="flex items-start">
                 <span className="text-[#00A699] mr-2">✓</span>
