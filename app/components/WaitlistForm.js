@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { supabase } from '@/lib/supabase';
+import SuccessModal from './SuccessModal';
 
 export default function WaitlistForm() {
   const [formData, setFormData] = useState({
@@ -14,6 +15,8 @@ export default function WaitlistForm() {
   const [status, setStatus] = useState('idle'); // idle, loading, success, error
   const [errorMessage, setErrorMessage] = useState('');
   const [lastSubmitTime, setLastSubmitTime] = useState(0);
+  const [showModal, setShowModal] = useState(false);
+  const [submittedName, setSubmittedName] = useState('');
 
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -101,6 +104,8 @@ export default function WaitlistForm() {
       if (error) throw error;
 
       setStatus('success');
+      setSubmittedName(formData.name);
+      setShowModal(true);
       setFormData({ name: '', email: '', phone: '', property_count: '', honeypot: '' });
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -126,27 +131,19 @@ export default function WaitlistForm() {
     });
   };
 
-  if (status === 'success') {
-    return (
-      <div className="text-center py-12">
-        <div className="text-6xl mb-4">🎉</div>
-        <h3 className="text-3xl font-bold text-gray-900 mb-4">
-          You're on the list!
-        </h3>
-        <p className="text-xl text-gray-600 mb-6">
-          We'll send you an email when CleanPing launches.
-        </p>
-        <button
-          onClick={() => setStatus('idle')}
-          className="text-[#00A699] font-semibold hover:underline"
-        >
-          Add another email →
-        </button>
-      </div>
-    );
-  }
+  const handleCloseModal = () => {
+    setShowModal(false);
+    setStatus('idle');
+  };
 
   return (
+    <>
+      <SuccessModal
+        isOpen={showModal}
+        onClose={handleCloseModal}
+        userName={submittedName}
+      />
+
     <form onSubmit={handleSubmit} className="space-y-4">
       {/* Honeypot field - hidden from users, bots will fill it */}
       <div className="absolute left-[-9999px]" aria-hidden="true">
@@ -251,5 +248,6 @@ export default function WaitlistForm() {
         🎁 Early members get 3 months free + lifetime discount
       </p>
     </form>
+    </>
   );
 }
