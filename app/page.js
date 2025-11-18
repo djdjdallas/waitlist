@@ -503,7 +503,7 @@ export default function Home() {
                 href="#waitlist"
                 className="inline-block bg-red-500 text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-red-600 transition-colors shadow-lg hover:shadow-xl"
               >
-                Join the Waitlist – Beta Launches February 2025
+                Join the Waitlist – Beta Launches January 2025
               </a>
             </div>
           </div>
@@ -524,7 +524,7 @@ export default function Home() {
               Be among the first 50 to get 50% off for life
             </p>
             <p className="text-sm text-gray-500">
-              127 hosts already joined • Beta launches February 2025
+              27 hosts already joined • Beta launches January 2025
             </p>
           </div>
 
